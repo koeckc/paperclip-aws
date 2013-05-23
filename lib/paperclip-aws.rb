@@ -31,7 +31,8 @@ module Paperclip
         @s3 ||= AWS::S3.new(
           :access_key_id => @s3_credentials[:access_key_id],
           :secret_access_key => @s3_credentials[:secret_access_key],
-          :s3_endpoint => @s3_endpoint
+          :s3_endpoint => @s3_endpoint,
+          :use_ssl => false
         )        
       end
       
